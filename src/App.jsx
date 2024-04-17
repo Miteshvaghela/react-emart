@@ -60,10 +60,10 @@ function App() {
   }
 
   const handleAddToCart = (id) => {
-    console.log(products);
-    const item = products.filter(item => item.id == id);
-    setCartItem([...cartItem, item]);
-    console.log(cartItem);
+    const item = products.filter(item => (parseInt(item.id) === parseInt(id)));
+    
+    setCartItem([...cartItem, item]) 
+    console.log(cartItem); 
   }
 
   const handleAddToWishList = (id) => {
