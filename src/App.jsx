@@ -2,7 +2,9 @@ import { useState } from 'react'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FeatureProducts from './components/FeatureProducts';
+import Cart from './components/Cart';
 import './App.css'
+
 
 function App() {  
 
@@ -51,8 +53,11 @@ function App() {
 
   return (
     <div className='container-fluid m-auto py-5 sm:container md:container lg:container xl:container'>
-        <Header logo="E-Mart"/>
-        <FeatureProducts products={products}/>
+        <Header logo="Movart"/>
+        <div className="content flex flex-row flex-wrap justify-between">
+          <FeatureProducts products={products}/>
+          <Cart />
+        </div>
         <Footer/>
     </div>
   )

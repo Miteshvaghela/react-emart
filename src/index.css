@@ -9,5 +9,5 @@ body{
 }
 .product-item{
     background:linear-gradient(180deg, #fff, rgba(161, 204, 244, 0.2));
-    min-height:350px;
+    min-height:300px;
 }

@@ -5,7 +5,7 @@ import { FaHeartCircleCheck } from "react-icons/fa6";
 
 const index = ({logo}) => {
   return (
-    <header className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-between items-center'>
+    <header className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-between items-center  bg-slate-300 rounded-md p-4'>
         <div>
           <h1 className='text-3xl font-bold px-5 py-3 text-center'>{logo}</h1>
         </div>
