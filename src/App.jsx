@@ -60,9 +60,16 @@ function App() {
   }
 
   const handleAddToCart = (id) => {
-    const item = products.filter(item => (parseInt(item.id) === parseInt(id)));
-    
-    setCartItem([...cartItem, item]) 
+    const item = products.filter(item => id === item.id);
+    let arr = item[0];
+    let obj = {
+      id : arr.id,
+      name:arr.name,
+      category:arr.category,
+      price:arr.price
+    }
+    const tempArr = cartItem.length ? [...cartItem, obj] : [obj];
+    setCartItem(tempArr); 
     console.log(cartItem); 
   }
 

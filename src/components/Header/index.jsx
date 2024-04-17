@@ -6,8 +6,7 @@ import { FaHeartCircleCheck } from "react-icons/fa6";
 const index = ({logo, handleSearch}) => {
   const [term, setTerm] = useState('');
   const handleBtn = (e) => {
-    e.preventDefault();
-    if(term.length == 0) alert('Please enter something');
+    e.preventDefault(); 
     handleSearch(term); 
   }
 
