@@ -3,3 +3,11 @@
 @tailwind utilities;
 
 
+
+body{
+    background: rgba(0,0,0,.1);
+}
+.product-item{
+    background:linear-gradient(180deg, #fff, rgba(161, 204, 244, 0.2));
+    min-height:350px;
+}

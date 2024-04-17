@@ -12,35 +12,40 @@ function App() {
       name:'Iphone 5',
       category:'Mobile phones',
       price:899.00,
-      rating:4.1
+      rating:4.1,
+      image: 'iphone.jpeg'
     },
     {
       id:2,
       name:'Ipad mini',
       category:'Tablets',
       price:999.00,
-      rating:4.5
+      rating:4.5,
+      image: 'ipad-mini.png'
     },
     {
       id:3,
       name:'Sony Television',
       category:'Television',
       price:1899.00,
-      rating:4.7
+      rating:4.7,
+      image: 'sony-television.jpg'
     },
     {
       id:4,
       name:'VR headset',
       category:'AR',
       price:3899.00,
-      rating:4.7
+      rating:4.7,
+      image: 'vr-headset.jpg'
     },
     {
       id:5,
       name:'Tech hoodie',
       category:'Clothes',
       price:49.00,
-      rating:3.2
+      rating:3.2,
+      image: 'tech-hoodie.jpg'
     }
   ]);
 

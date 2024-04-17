@@ -19,9 +19,11 @@ const index = ({logo}) => {
             </div>
           </form>
         </div>
-        <div className='flex mb-3 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 flex-row justify-between cursor-pointer w-24'>
-          <span className='w-10 text-center'><FaCartArrowDown className='w-8 text-xl m-auto text-center' /> Cart</span>
-          <span className='w-10 text-center'><FaHeartCircleCheck className='w-8 text-xl m-auto text-center' /> Wishlist</span>
+        <div className='flex mb-3 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 flex-row justify-end cursor-pointer w-62'>
+          <p className=' w-32 text-center position-relative'><FaCartArrowDown className='w-8 text-xl m-auto text-center' /> Cart - <span className="count  font-bold text-xs">12</span></p>
+           
+          <p className='w-30 text-center position-relative'><FaHeartCircleCheck className='w-8 text-xl m-auto text-center' /> Wishlist - <span className="count  font-bold text-xs">190</span></p>
+          
         </div>
     </header>
   )
