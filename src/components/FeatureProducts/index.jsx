@@ -7,12 +7,12 @@ const index = ({products, handleAddToCart, handleAddToWishList}) => {
 
     // <FaRegStar />
     
-    const handleWishList = () => {
-
+    const handleWishList = (id) => { 
+        handleAddToWishList(id);
     }
 
-    const handleCart = () => {
-        
+    const handleCart = (id) => {  
+        handleAddToCart(id);
     }
     
 
@@ -28,8 +28,8 @@ const index = ({products, handleAddToCart, handleAddToWishList}) => {
                 <h2 className='text-xl'>Price : ${item.price}</h2> 
                 <h2 className='text-xl'>Rating : {item.rating}/5</h2>
                 <div className="action flex flex-row flex-wrap align-bottom align-items-end justify-between">
-                    <button className=' bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' ><FaCartArrowDown className='w-8 text-xl m-auto text-center' onClick={handleCart} /></button>
-                    <button className=' bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' ><FaHeartCircleCheck className='w-8 text-xl m-auto text-center' onClick={handleWishList} /></button>
+                    <button className=' bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' ><FaCartArrowDown className='w-8 text-xl m-auto text-center' onClick={e => handleCart(item.id)} /></button>
+                    <button className=' bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' ><FaHeartCircleCheck className='w-8 text-xl m-auto text-center' onClick={e => handleWishList(item.id)} /></button>
                 </div>                
             </div>
         )) : 'No products'}

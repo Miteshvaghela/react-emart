@@ -51,6 +51,8 @@ function App() {
     }
   ]);
   const [items, setItems] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
+  const [cartItem, setCartItem] = useState([]);
   
   const handleSearch = (term) => {
     let filterData = products.filter(item => item.name.toLowerCase().includes(term.toLowerCase()));
@@ -58,11 +60,14 @@ function App() {
   }
 
   const handleAddToCart = (id) => {
-    console.log('id : ', id);
+    console.log(products);
+    const item = products.filter(item => item.id == id);
+    setCartItem([...cartItem, item]);
+    console.log(cartItem);
   }
 
   const handleAddToWishList = (id) => {
-    console.log('id : ', id);
+    
   }
 
   return (
@@ -71,7 +76,7 @@ function App() {
         <Header logo="Movart" handleSearch={handleSearch}/>
         <div className="content flex flex-row flex-wrap justify-between">
           <FeatureProducts products={items.length?items:products} handleAddToCart={handleAddToCart} handleAddToWishList={handleAddToWishList}/>
-          <Cart />
+          <Cart cartItems={cartItem}/>
         </div>
         <Footer/>
     </div>
