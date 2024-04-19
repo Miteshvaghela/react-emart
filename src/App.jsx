@@ -63,14 +63,15 @@ function App() {
     const item = products.filter(item => id === item.id);
     let arr = item[0];
     let obj = {
-      id : arr.id,
-      name:arr.name,
-      category:arr.category,
-      price:arr.price
+      id: arr.id,
+      name: arr.name,
+      category: arr.category,
+      price: arr.price
     }
     const tempArr = cartItem.length ? [...cartItem, obj] : [obj];
     setCartItem(tempArr); 
-    console.log(cartItem); 
+    console.log('Data : ', id, obj);
+    console.log('cart item : ', tempArr); 
   }
 
   const handleAddToWishList = (id) => {

@@ -17,9 +17,9 @@ const index = ({logo, handleSearch}) => {
         </div>
         <div className='flex mb-3 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 flex-row justify-center align-middle align-content-center'>
           <form>
-            <div className="form-control">
+            <div className="form-control ">
               <label htmlFor="search">
-                <input type="text" value={term} onChange={e => setTerm(e.target.value)} placeholder='Search for product...' className='border-slate-600 px-3 mr-2 py-1 border rounded-xl' id="term" />
+                <input type="text" value={term} onChange={e => setTerm(e.target.value)} placeholder='Search for product...' className='border-slate-600 px-3 mr-2 py-1 border rounded-xl w-96' id="term" />
               </label>
               <input type="submit" className='btn btn-primary bg-slate-600 text-white px-3 py-1 border-slate-600 border rounded-xl' value="Search" onClick={e => handleBtn(event)} />
             </div>
