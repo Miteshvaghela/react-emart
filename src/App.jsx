@@ -68,9 +68,9 @@ function App() {
       category: arr.category,
       price: arr.price
     }
-    const tempArr = cartItem.length ? [...cartItem, obj] : [obj];
+    const tempArr = (cartItem.length > 0) ? [...cartItem, obj] : [obj];
     setCartItem(tempArr); 
-    console.log('Data : ', id, obj);
+    console.log('Data : ', id, cartItem);
     console.log('cart item : ', tempArr); 
   }
 
