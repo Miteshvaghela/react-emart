@@ -70,9 +70,9 @@ function App() {
     }
     const tempArr = (cartItem.length > 0) ? [...cartItem, obj] : [obj];
     setCartItem(tempArr); 
-    
+
     console.log('Data : ', id, cartItem);
-    console.log('cart item : ', tempArr); 
+    console.log('Temp array : ', tempArr);  
   }
 
   const handleAddToWishList = (id) => {
