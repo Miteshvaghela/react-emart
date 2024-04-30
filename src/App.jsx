@@ -4,8 +4,6 @@ import Footer from './components/Footer';
 import FeatureProducts from './components/FeatureProducts';
 import Cart from './components/Cart';
 import './App.css'
-
-
 function App() {  
 
   const [products, setProducts] = useState([

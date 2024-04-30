@@ -1,10 +1,7 @@
-import React from 'react'
 import { FaCartArrowDown } from "react-icons/fa6";
 import { FaHeartCircleCheck } from "react-icons/fa6";
-import { FaRegStar } from "react-icons/fa6";
 
 const index = ({products, handleAddToCart, handleAddToWishList}) => {
-    // <FaRegStar />
     
     const handleWishList = (id) => { 
         handleAddToWishList(id);
