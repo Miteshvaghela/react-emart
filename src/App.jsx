@@ -66,7 +66,8 @@ function App() {
       category: arr.category,
       price: arr.price
     }
-    const tempArr = (cartItem.length > 0) ? [...cartItem, obj] : [obj];
+    let tempArr = (cartItem.length > 0) ? [...cartItem, obj] : [obj];
+    
     setCartItem(tempArr); 
 
     console.log('Data : ', id, cartItem);
@@ -75,6 +76,18 @@ function App() {
   }
 
   const handleAddToWishList = (id) => {
+
+    
+    const item = products.filter(item => id === item.id);
+    let arr = item[0];
+    let obj = {
+      id: arr.id,
+      name: arr.name,
+      category: arr.category,
+      price: arr.price
+    }
+    let tempArr = (wishlist.length > 0) ? [...wishlist, obj] : [obj];
+    setWishlist(tempArr); 
     
   }
 
