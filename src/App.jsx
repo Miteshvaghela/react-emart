@@ -71,6 +71,7 @@ function App() {
 
     console.log('Data : ', id, cartItem);
     console.log('Temp array : ', tempArr);  
+    console.log(`${tempArr.length} products have been added to cart`);
   }
 
   const handleAddToWishList = (id) => {
@@ -80,7 +81,7 @@ function App() {
   return (
     <div className='container-fluid m-auto py-5 sm:container md:container lg:container xl:container'>
         {false && <Loader />}
-        <Header logo="Movart" handleSearch={handleSearch}/>
+        <Header logo="Movart" handleSearch={handleSearch} cart={cartItem} wishlist={wishlist}/>
         <div className="content flex flex-row flex-wrap justify-between">
           <FeatureProducts products={items.length?items:products} handleAddToCart={handleAddToCart} handleAddToWishList={handleAddToWishList}/>
           <Cart cartItems={cartItem}/>

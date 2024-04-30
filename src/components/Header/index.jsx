@@ -3,7 +3,7 @@ import { FaCartArrowDown } from "react-icons/fa6";
 import { FaHeartCircleCheck } from "react-icons/fa6";
 
 
-const index = ({logo, handleSearch}) => {
+const index = ({logo, handleSearch, cart, wishlist}) => {
   const [term, setTerm] = useState('');
   const handleBtn = (e) => {
     e.preventDefault(); 
@@ -11,7 +11,7 @@ const index = ({logo, handleSearch}) => {
   }
 
   return (
-    <header className='flex flex-col sm:flex-row md:flex-row lg:flex-row justify-between items-center  bg-slate-300 rounded-md p-4'>
+    <header className='flex sticky top-0 flex-col sm:flex-row md:flex-row lg:flex-row justify-between items-center  bg-slate-300 rounded-md p-4'>
         <div>
           <h1 className='text-3xl font-bold px-5 py-3 text-center'>{logo}</h1>
         </div>
@@ -26,7 +26,7 @@ const index = ({logo, handleSearch}) => {
           </form>
         </div>
         <div className='flex mb-3 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 flex-row justify-end cursor-pointer w-62'>
-          <p className=' w-32 text-center position-relative'><FaCartArrowDown className='w-8 text-xl m-auto text-center' /> Cart - <span className="count  font-bold text-xs">0</span></p>
+          <p className=' w-32 text-center position-relative'><FaCartArrowDown className='w-8 text-xl m-auto text-center' /> Cart - <span className="count  font-bold text-xs">{ (cart.length) ? cart.length : '0'}</span></p>
            
           <p className='w-30 text-center position-relative'><FaHeartCircleCheck className='w-8 text-xl m-auto text-center' /> Wishlist - <span className="count  font-bold text-xs">0</span></p>
           
