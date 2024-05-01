@@ -1,4 +1,5 @@
 import React, {useState} from 'react' 
+import { FaCcPaypal } from "react-icons/fa6";
 
 const index = ({cartItems}) => { 
 
@@ -14,7 +15,7 @@ const index = ({cartItems}) => {
 
 
   return (
-    <div className="w-1/3">
+    <div className="w-1/3 ">
         <div className="header m-4">
             <h2 className='font-bold text-gray-800'>Shopping Cart</h2>
         </div>   
@@ -65,12 +66,14 @@ const index = ({cartItems}) => {
                         <td className="px-6 py-4" colSpan="3">
                             Total
                         </td>
-                        <td className="px-6 py-4">
-                            ${cartItems.reduce((total, currentValue) => total = total + currentValue.price,0)}
+                        <td className="px-6 py-4 text-red-500 font-bold">
+                            <p className=' block '>${cartItems.reduce((total, currentValue) => total = total + currentValue.price,0)}</p>
+                            <button className='btn-block mt-4 bg-neutral-600 text-zinc-100 py-2 px-3 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' onClick={e => alert('Payment page.')}><FaCcPaypal className=' text-5xl m-auto text-center' /></button>
                         </td>                        
                     </tr>
             </tfoot>
         </table> 
+        
 
     </div>
   )
