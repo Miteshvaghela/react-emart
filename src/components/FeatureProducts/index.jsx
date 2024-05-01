@@ -24,8 +24,8 @@ const index = ({products, handleAddToCart, handleAddToWishList}) => {
                 <h2 className='text-xl'>Price : ${item.price}</h2> 
                 <h2 className='text-xl'>Rating : {item.rating}/5</h2>
                 <div className="action flex flex-row flex-wrap align-bottom align-items-end justify-between">
-                    <button className=' bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' ><FaCartArrowDown className='w-8 text-xl m-auto text-center' onClick={e => handleCart(item.id)} /></button>
-                    <button className=' bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' ><FaHeartCircleCheck className='w-8 text-xl m-auto text-center' onClick={e => handleWishList(item.id)} /></button>
+                    <button className='btn-block bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' onClick={e => handleCart(item.id)}><FaCartArrowDown className='w-8 text-xl m-auto text-center' /></button>
+                    <button className='btn-block bg-neutral-600 text-zinc-100 py-1 px-2 text-sm rounded-md hover:bg-neutral-100 hover:text-zinc-900' onClick={e => handleWishList(item.id)}><FaHeartCircleCheck className='w-8 text-xl m-auto text-center'/></button>
                 </div>                
             </div>
         )) : 'No products'}

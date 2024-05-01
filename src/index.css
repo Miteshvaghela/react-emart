@@ -11,3 +11,11 @@ body{
     background:linear-gradient(180deg, #fff, rgba(161, 204, 244, 0.2));
     min-height:300px;
 }
+
+.btn-block{
+    border-bottom: 4px solid lightslategray;
+    transition: ease-in-out .1s;
+}
+.btn-block:active{
+    border-bottom: 0px;
+}
