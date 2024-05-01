@@ -67,12 +67,12 @@ function App() {
       price: arr.price
     }
     let tempArr = (cartItem.length > 0) ? [...cartItem, obj] : [obj];
-    
+
     setCartItem(tempArr); 
 
-    console.log('Data : ', id, cartItem);
-    console.log('Temp array : ', tempArr);  
-    console.log(`${tempArr.length} products have been added to cart`);
+    // console.log('Data : ', id, cartItem);
+    // console.log('Temp array : ', tempArr);  
+    // console.log(`${tempArr.length} products have been added to cart`);
   }
 
   const handleAddToWishList = (id) => {

@@ -1,13 +1,25 @@
-import React from 'react' 
+import React, {useState} from 'react' 
 
-const index = ({cartItems}) => {
+const index = ({cartItems}) => { 
+
+    const [cartTotal, setCartTotal] = useState(0);
+
+    if(cartItems.length){
+        let sum = 0;
+        cartItems.map(item => {
+            sum += parseInt(item.price);
+        });
+        console.log(sum); 
+    }
+
+
   return (
     <div className="w-1/3">
         <div className="header m-4">
             <h2 className='font-bold text-gray-800'>Shopping Cart</h2>
         </div>   
  
-        <table className="w-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+        <table className="w-auto sticky top-28 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border rounded-lg">
                 <tr>
                     <th scope="col" className="px-6 py-3">
@@ -25,25 +37,23 @@ const index = ({cartItems}) => {
                 </tr>
             </thead>
             <tbody>
-                {cartItems.length ? (
-                    cartItems.map((item, index) => {
-                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                {(cartItems.length > 0) ? cartItems.map((item, index) =>   
+                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={index+1}>
                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                {index}
-                            </th> 
+                                {index+1}
+                            </th>
                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {item.name}
-                            </th> 
-                            <td className="px-6 py-4">
+                            </th>
+                            <th className="px-6 py-4">
                                 1
-                            </td>
-                            <td className="px-6 py-4">
+                            </th>
+                            <th className="px-6 py-4">
                                 ${item.price}
-                            </td>
+                            </th>
                         </tr>
-                    })
-                ) : (
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    ) : (
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <th scope="row" colSpan={4} className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         No products
                     </th>
@@ -56,7 +66,7 @@ const index = ({cartItems}) => {
                             Total
                         </td>
                         <td className="px-6 py-4">
-                            Total
+                            ${cartItems.reduce((total, currentValue) => total = total + currentValue.price,0)}
                         </td>                        
                     </tr>
             </tfoot>
